@@ -1,0 +1,12 @@
+.Footer {
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+  ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    position: absolute;
+    bottom: 0;
+  }
+}
