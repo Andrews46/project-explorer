@@ -1,4 +1,4 @@
-const BASE_URL = "https://api.musement.com/api/v3/";
+const BASE_URL = "https://fakestoreapi.com/";
 
 export const GET = async (param) => {
   const res = await fetch(BASE_URL + param);

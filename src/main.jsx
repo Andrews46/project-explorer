@@ -2,7 +2,9 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Activity from "./pages/Activity";
+import MainLayout from "./layouts/MainLayout";
+import Activities from "./pages/activity/index";
+import ActivityId from "./pages/activity/id";
 import City from "./pages/City";
 import {
   createBrowserRouter,
@@ -14,10 +16,11 @@ import "./index.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+    <Route element={<MainLayout />}>
       <Route path="/" element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="activity/:id" element={<Activity />} />
+      <Route path="activity" element={<Activities />} />
+      <Route path="activity/:id" element={<ActivityId />} />
       <Route path="city/:id" element={<City />} />
     </Route>
   )

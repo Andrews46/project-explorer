@@ -7,7 +7,7 @@ const Footer = () => {
         <li>About</li>
         <li>Termini e Condizioni</li>
         <li>Privacy Policy</li>
-        <li>Social Musement Facebook, Twitter, Instagram</li>
+        <li>Social Facebook, Twitter, Instagram</li>
       </ul>
     </div>
   );
