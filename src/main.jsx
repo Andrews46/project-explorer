@@ -3,8 +3,8 @@ import { createRoot } from "react-dom/client";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import MainLayout from "./layouts/MainLayout";
-import Activities from "./pages/activity/index";
-import ActivityId from "./pages/activity/id";
+import Activities from "./pages/activities";
+import ActivityId from "./pages/activities/id";
 import City from "./pages/City";
 import {
   createBrowserRouter,
@@ -19,8 +19,8 @@ const router = createBrowserRouter(
     <Route element={<MainLayout />}>
       <Route path="/" element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="activity" element={<Activities />} />
-      <Route path="activity/:id" element={<ActivityId />} />
+      <Route path="activities" element={<Activities />} />
+      <Route path="activities/:id" element={<ActivityId />} />
       <Route path="city/:id" element={<City />} />
     </Route>
   )

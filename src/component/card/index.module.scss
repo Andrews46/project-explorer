@@ -1,7 +1,12 @@
 .Card {
+  transition: transform 0.35s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
   img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
   }
 }

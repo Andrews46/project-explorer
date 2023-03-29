@@ -9,7 +9,6 @@ export default function Activities() {
 
   useEffect(() => {
     GET(`products`).then((data) => {
-      console.log(data);
       setAttivita(data);
     });
   }, []);
