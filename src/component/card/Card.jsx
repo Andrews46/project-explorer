@@ -5,13 +5,13 @@ const Card = ({ data }) => {
   const navigate = useNavigate();
 
   const onHandleClick = () => {
-    navigate(`/activities/${data.id}`);
+    navigate(`/activities/${data.uuid}`);
   };
   return (
     <div className={styles.Card} onClick={onHandleClick}>
-      <img src={data.image} alt={data.title} />
-      <h3>{data.title.split(" ").splice(0, 3).join(" ")}</h3>
-      <p>Prezzo: {data.price} $</p>
+      <img src={data.cover_image_url} alt={data.name} />
+      {/* <h3>{data.title.split(" ").splice(0, 3).join(" ")}</h3> */}
+      <p>{data.title}</p>
     </div>
   );
 };

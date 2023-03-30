@@ -1,29 +1,31 @@
 import { useState, useEffect } from "react";
 import CardList from "../../component/cardList";
-import { GET } from "../../utils/http";
-
+// import { GET } from "../../utils/http";
+import myJson from "../../mock/musement.json";
 import styles from "../../style/index.module.scss";
 
 export default function Activities() {
   const [attivita, setAttivita] = useState([]);
-
   useEffect(() => {
-    GET(`products`).then((data) => {
-      setAttivita(data);
-    });
+    // GET(`activies?limit=20`).then((data) => {
+    setAttivita(() => myJson.data);
   }, []);
 
-  const filterList = (list, category) =>
-    list.filter((item) => item.category === category);
+  const filterAttivita = (list, country) =>
+    list.filter((item) => item.city.country.iso_code === country);
   return (
     <div className={styles.Activity}>
       <section>
-        <h2>Categoria: Elettronica</h2>
-        <CardList data={filterList(attivita, "electronics")} />
+        <h2>Tour Francesi</h2>
+        <CardList data={filterAttivita(attivita, "FR")} />
       </section>
       <section>
-        <h2>Categoria: Vestiti</h2>
-        <CardList data={filterList(attivita, "men's clothing")} />
+        <h2>Tour Americani</h2>
+        <CardList data={filterAttivita(attivita, "US")} />
+      </section>
+      <section>
+        <h2>Tour Italiani</h2>
+        <CardList data={filterAttivita(attivita, "IT")} />
       </section>
     </div>
   );

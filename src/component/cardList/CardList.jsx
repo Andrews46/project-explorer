@@ -5,7 +5,7 @@ const CardList = ({ data }) => {
   return (
     <div className={styles.CardList}>
       {data.map((item) => (
-        <Card data={item} key={item.id} />
+        <Card data={item} key={item.uuid} />
       ))}
     </div>
   );
