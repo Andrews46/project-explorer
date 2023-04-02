@@ -1,9 +1,13 @@
+import { useSearchParams } from "react-router-dom";
 import styles from "../style/city.module.scss";
 
 export default function City() {
+  const [searchParams] = useSearchParams();
   return (
     <div className={styles.City}>
-      <h1>sono City</h1>
+      {searchParams.get("date") && (
+        <h1>Hai prenotato per la data {searchParams.get("date")}</h1>
+      )}
     </div>
   );
 }

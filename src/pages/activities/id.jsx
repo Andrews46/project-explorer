@@ -14,12 +14,9 @@ export default function ActivityId() {
 
   return (
     <div className={styles.ActivityId}>
-      <h1>{activitiId.title}</h1>
-      {/* <p>{activitiId.id}</p>
-      <p>{activitiId.name}</p>
-      <p>{activitiId.category}</p> */}
-
       <img src={activitiId.cover_image_url} alt={activitiId.title} />
+      <h1>{activitiId.title}</h1>
+      <p>{activitiId.description}</p>
     </div>
   );
 }
