@@ -10,7 +10,7 @@ const NavBar = () => {
   const onHandleInput = (e) => setInput(() => e.target.value);
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/city/${input}`);
+    navigate(`/${input}`);
     setInput(() => "");
   };
 
@@ -32,15 +32,17 @@ const NavBar = () => {
             <Link to="About">About</Link>
           </li>
         </ul>
+        <div className={styles.formContain}>
+          <form onSubmit={onHandleSubmit}>
+            <input
+              onChange={onHandleInput}
+              value={input}
+              type="text"
+              placeholder="Cerca ..."
+            />
+          </form>
+        </div>
       </div>
-      <form onSubmit={onHandleSubmit}>
-        <input
-          onChange={onHandleInput}
-          value={input}
-          type="text"
-          placeholder="Cerca..."
-        />
-      </form>
     </div>
   );
 };

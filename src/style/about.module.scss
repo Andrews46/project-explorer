@@ -1,7 +1,24 @@
 .About {
+  padding-left: 20px;
+
   h1 {
     padding: 12px;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .inputData {
+    width: 146px;
+    border-radius: 12px;
+    padding-left: 36px;
+  }
+  .btnData {
+    margin-left: 20px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 736px) {
+  .About {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

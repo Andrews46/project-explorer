@@ -7,10 +7,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(130, 132, 95);
+  background-color: #0071c2;
   ul {
     display: flex;
     gap: 20px;
     list-style-type: none;
+    cursor: pointer;
+    :hover {
+      color: whitesmoke;
+    }
   }
 }

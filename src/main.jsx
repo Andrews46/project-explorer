@@ -21,7 +21,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="activities" element={<Activities />} />
       <Route path="activities/:id" element={<ActivityId />} />
-      <Route path="city" element={<City />} />
+      <Route path="City/:id" element={<City />} />
     </Route>
   )
 );

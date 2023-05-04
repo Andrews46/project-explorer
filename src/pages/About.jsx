@@ -11,13 +11,21 @@ export default function About() {
   };
 
   const onHandleClick = () => {
-    navigate(`/city?date=${input}`);
+    navigate(`/City/:id?date=${input}`);
   };
   return (
     <div className={styles.About}>
       <h1>Scegli la data per la prenotazione</h1>
-      <input onChange={onHandleSubmit} type="date" name="" id="" />
-      <button onClick={onHandleClick}>Imposta data</button>
+      <input
+        className={styles.inputData}
+        onChange={onHandleSubmit}
+        type="date"
+        name=""
+        id=""
+      />
+      <button className={styles.btnData} onClick={onHandleClick}>
+        Imposta data
+      </button>
     </div>
   );
 }

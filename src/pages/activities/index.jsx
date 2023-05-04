@@ -9,6 +9,7 @@ export default function Activities() {
   useEffect(() => {
     // GET(`activies?limit=20`).then((data) => {
     setAttivita(() => myJson.data);
+    console.log(attivita);
   }, []);
 
   const filterAttivita = (list, country) =>
@@ -26,6 +27,22 @@ export default function Activities() {
       <section>
         <h2>Tour Italiani</h2>
         <CardList data={filterAttivita(attivita, "IT")} />
+      </section>
+      <section>
+        <h2>Tour Tedeschi</h2>
+        <CardList data={filterAttivita(attivita, "DE")} />
+      </section>
+      <section>
+        <h2>Tour Spagnoli</h2>
+        <CardList data={filterAttivita(attivita, "ES")} />
+      </section>
+      <section>
+        <h2>Tour Giapponesi</h2>
+        <CardList data={filterAttivita(attivita, "JP")} />
+      </section>
+      <section>
+        <h2>Tour Portoghesi</h2>
+        <CardList data={filterAttivita(attivita, "PT")} />
       </section>
     </div>
   );
